@@ -6,3 +6,7 @@
 
 Исправить код из файла {file}, результать поместить в {file}
     php corrector/code.php mv {file}
+
+Исправить найденые по имени файлы в директории {dir} с заменой исходников
+    find {dir} -name '{name}' -exec php ../corrector/code.php mv {} \;
+    
