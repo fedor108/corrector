@@ -4,9 +4,9 @@
  */
 class Corrector
 {
-    public function correct($data = array())
-    {
-        array_walk($data, function (&$line) {
+	public function correct($data = array())
+	{
+		array_walk($data, function (&$line) {
             $line = str_replace("\t", str_repeat(' ', 4), $line);
             $line = rtrim($line) . "\n";
             $line = str_replace("if(", "if (", $line);
@@ -23,7 +23,7 @@ class Corrector
             $line = $this->phpEcho($line);
         });
         return $data;
-    }
+	}
 
     private function bracketClose($line)
     {
